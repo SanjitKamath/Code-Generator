@@ -1,178 +1,160 @@
-```markdown
+Here's a **cleaned and properly formatted `README.md`** file for your project:
+
+````markdown
 # AI Code Generator with RAG
 
 A sophisticated **Retrieval-Augmented Generation (RAG)** powered code generation application that leverages Google's Vertex AI Gemini 2.0 Flash model to provide intelligent, context-aware code generation based on best practices and domain-specific knowledge.
 
-## Overview
+---
 
-This application combines the power of modern AI with enterprise-grade vector search to generate high-quality code snippets, complete projects, and technical solutions. The system uses a RAG architecture to retrieve relevant coding best practices and guidelines before generating responses, ensuring more accurate and contextually appropriate code generation.
+## 🧠 Overview
 
-## Architecture
+This application combines the power of modern AI with enterprise-grade vector search to generate high-quality code snippets, complete projects, and technical solutions. It uses a RAG architecture to retrieve relevant coding best practices and guidelines before generating responses, ensuring accurate and contextually appropriate code.
+
+---
+
+## 🏗️ Architecture
 
 The system consists of several key components:
 
-- **FastAPI Web Application** (`main.py`): RESTful API server with web interface
-- **RAG Code Generator** (`generator.py`): Core engine that combines vector search with AI generation
-- **Knowledge Base Builder** (`build_knowledge_base.py`): Utility to create and maintain the vector knowledge base
-- **Web Interface**: Clean, responsive frontend for user interactions
+- **FastAPI Web Application (`main.py`)**: RESTful API server with web interface  
+- **RAG Code Generator (`generator.py`)**: Core engine combining vector search with AI generation  
+- **Knowledge Base Builder (`build_knowledge_base.py`)**: Utility to create and manage the vector knowledge base  
+- **Web Interface**: Clean, responsive frontend for user interaction  
 
-## Technologies Used
+---
 
-### Core Technologies
-- **Python 3.8+**: Primary programming language
-- **FastAPI**: High-performance, modern web framework for building APIs
-- **Uvicorn**: Lightning-fast ASGI server for serving the FastAPI application
+## 🧰 Technologies Used
+
+### Core Stack
+
+- **Python 3.8+** – Main programming language  
+- **FastAPI** – High-performance web framework  
+- **Uvicorn** – ASGI server for FastAPI apps  
 
 ### AI & Machine Learning
-- **Google Vertex AI**: Enterprise AI platform for model hosting and management
-- **Gemini 2.0 Flash Lite**: Latest generation multimodal AI model for code generation
-- **Text Embedding Model (text-embedding-005)**: Advanced embedding model for semantic search
+
+- **Google Vertex AI** – Managed AI model hosting and execution  
+- **Gemini 2.0 Flash Lite** – Multimodal code generation model  
+- **Text Embedding Model (`text-embedding-005`)** – Embedding engine for semantic retrieval  
 
 ### Vector Search & Retrieval
-- **FAISS (Facebook AI Similarity Search)**: High-performance vector similarity search library
-- **NumPy**: Numerical computing library for vector operations
 
-### Cloud Services
-- **Google Cloud Storage**: Scalable object storage for knowledge base persistence
-- **Google Cloud AI Platform**: Managed AI services and model deployment
+- **FAISS** – High-speed vector similarity search  
+- **NumPy** – Efficient numerical computations for embeddings  
+
+### Cloud Infrastructure
+
+- **Google Cloud Storage** – Persistent object storage for knowledge base  
+- **Google Cloud AI Platform** – Deployment and orchestration for AI models  
 
 ### Frontend Technologies
-- **HTML5/CSS3**: Modern web standards for user interface
-- **JavaScript (ES6+)**: Interactive frontend functionality
-- **Responsive Design**: Mobile-friendly user experience
 
-## Features
+- **HTML5/CSS3** – Markup and styling  
+- **JavaScript (ES6+)** – Frontend interactivity  
+- **Responsive Design** – Mobile-optimized user experience  
 
-### Intelligent Code Generation
-- **Context-Aware Generation**: Uses RAG to provide relevant coding context
-- **Multi-Language Support**: Generates code in various programming languages
-- **Best Practices Integration**: Built-in knowledge of coding standards and patterns
-- **Security-First Approach**: Follows security best practices in generated code
+---
 
-### Advanced Retrieval System
-- **Semantic Search**: FAISS-powered vector similarity search
-- **Knowledge Base**: Curated collection of coding guidelines and best practices
-- **Scalable Architecture**: Handles large-scale document collections efficiently
+## ✨ Features
 
-### Web Interface
-- **Clean UI**: Intuitive and user-friendly interface
-- **Real-time Generation**: Instant feedback and code generation
-- **Copy-Paste Friendly**: Well-formatted, ready-to-use code output
+### 🔍 Intelligent Code Generation
 
-### Enterprise Features
-- **Scalable Deployment**: Cloud-native architecture
-- **Logging & Monitoring**: Comprehensive application logging
-- **Error Handling**: Robust error management and user feedback
-- **Configuration Management**: Environment-based configuration
+- Context-aware, RAG-powered generation  
+- Multi-language code output  
+- Adheres to secure and best-practice coding patterns  
 
-## Quick Start
+### 🧠 Semantic Retrieval System
 
-### Prerequisites
-- Python 3.8 or higher
-- Google Cloud Platform account with Vertex AI enabled
-- Google Cloud Storage bucket (optional, for knowledge base storage)
+- FAISS-based semantic search  
+- Domain-tuned knowledge base  
+- Efficiently scales with large document collections  
 
-### Installation
+### 💻 Web Interface
+
+- Clean and user-friendly UI  
+- Real-time output  
+- Easy copy-paste integration  
+
+### 🏢 Enterprise-Ready
+
+- Scalable cloud-native deployment  
+- Detailed logging and error tracking  
+- Environment-based configuration management  
+
+---
+
+## 🚀 Quick Start
+
+### ✅ Prerequisites
+
+- Python 3.8 or later  
+- Google Cloud account with Vertex AI enabled  
+- GCS bucket (optional, for persistent KB storage)  
+
+### 📦 Installation
 
 1. **Clone the repository**
-    ```
-    git clone 
+    ```bash
+    git clone https://github.com/your-org/ai-code-generator.git
     cd ai-code-generator
     ```
 
 2. **Install dependencies**
-    ```
+    ```bash
     pip install -r requirements.txt
     ```
 
-3. **Set up environment variables**
-    Create a `.env` file in the root directory:
-    ```
+3. **Configure environment**
+    Create a `.env` file in the root directory with the following:
+    ```env
     VERTEX_PROJECT_ID=your-gcp-project-id
     VERTEX_LOCATION=us-central1
     GCS_BUCKET_NAME=your-gcs-bucket-name
     ```
 
 4. **Build the knowledge base**
-    ```
+    ```bash
     python build_knowledge_base.py
     ```
 
 5. **Run the application**
-    ```
+    ```bash
     python main.py
     ```
 
-The application will be available at `http://127.0.0.1:8000`
+Visit: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Project Structure
+---
 
-```
+## 📁 Project Structure
+
+````
+
 ai-code-generator/
-├── main.py                  # FastAPI application entry point
-├── generator.py             # RAG-based code generation engine
-├── build_knowledge_base.py  # Knowledge base creation utility
-├── requirements.txt         # Python dependencies
-├── static/
-│   ├── style.css            # Application styles
-│   └── script.js            # Frontend JavaScript
-├── templates/
-│   └── index.html           # Main application template
-└── README.md                # This file
+├── build\_knowledge\_base.py     # Build FAISS index from documents
+├── generator.py                # RAG engine: embeddings + AI generation
+├── main.py                     # FastAPI server entry point
+├── templates/                  # HTML templates for frontend
+├── static/                     # CSS/JS files
+├── .env                        # Environment configuration
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+
 ```
 
-## 🔧 Configuration
+---
 
-### Environment Variables
-- `VERTEX_PROJECT_ID`: Your Google Cloud Project ID
-- `VERTEX_LOCATION`: Vertex AI location (default: us-central1)
-- `GCS_BUCKET_NAME`: Google Cloud Storage bucket for knowledge base
-- `KMP_DUPLICATE_LIB_OK`: Set to "TRUE" to handle library conflicts
+## 📬 Contact
 
-### Knowledge Base Configuration
-The knowledge base can be customized by modifying the `documents` array in `build_knowledge_base.py`. Add your own coding guidelines, best practices, or domain-specific knowledge to improve generation quality.
+For questions or contributions, please open an issue or contact the maintainer at [your-email@example.com].
 
-## Usage Examples
+---
 
-### Basic Code Generation
-1. Navigate to the web interface
-2. Enter a natural language description of your coding needs
-3. Click "Generate" to receive AI-generated code
-4. Copy and use the generated code in your projects
+## 📄 License
 
+This project is licensed under the [MIT License](LICENSE).
 
-## 🔒 Security Considerations
-
-- **API Key Management**: Never commit API keys to version control
-- **Input Validation**: All user inputs are validated and sanitized
-- **Secure Defaults**: Application follows security-first principles
-- **HTTPS Ready**: Designed for secure deployment with HTTPS
-
-## 🚀 Deployment
-
-### Local Development
-```
-uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### Production Deployment
-For production deployments, consider:
-- Using a production ASGI server like Gunicorn
-- Setting up proper logging and monitoring
-- Implementing rate limiting and authentication
-- Using environment-specific configuration
-
-
-## Acknowledgments
-
-- **Google Vertex AI** for providing state-of-the-art AI models
-- **Facebook AI Research** for the FAISS library
-- **FastAPI** community for the excellent web framework
-- **Meta AI** for RAG research and methodologies
-
-
-
-
-[4] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/80699761/c095638b-77ce-4b5e-9335-49cf1e085354/index.html
-[5] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/80699761/be9249a8-d454-4c6a-90b0-3f1c3c890835/script.js
-[6] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/80699761/d26cfdd3-f1d6-4725-81c9-7afe3f7e8c61/style.css
+Let me know if you want to include badges, demo images, or GIFs!
