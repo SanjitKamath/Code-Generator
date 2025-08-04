@@ -1,0 +1,923 @@
+2025-08-04 11:58:32,649 - INFO - Initializing CodeGenerator...
+2025-08-04 11:58:32,649 - INFO - Vertex AI initialized.
+2025-08-04 11:58:32,649 - ERROR - Failed to load code model.
+2025-08-04 11:58:32,649 - ERROR - CodeGenerator initialization failed:
+2025-08-04 11:58:32,652 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 11:58:32,801 - INFO - Initializing CodeGenerator...
+2025-08-04 11:58:32,806 - INFO - Vertex AI initialized.
+2025-08-04 11:58:32,806 - ERROR - Failed to load code model.
+2025-08-04 11:58:32,806 - ERROR - CodeGenerator initialization failed:
+2025-08-04 11:58:32,806 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 11:59:21,857 - INFO - Initializing CodeGenerator...
+2025-08-04 11:59:21,857 - INFO - Vertex AI initialized.
+2025-08-04 11:59:21,857 - ERROR - Failed to load code model.
+2025-08-04 11:59:21,857 - ERROR - CodeGenerator initialization failed:
+2025-08-04 11:59:21,863 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 11:59:22,021 - INFO - Initializing CodeGenerator...
+2025-08-04 11:59:22,021 - INFO - Vertex AI initialized.
+2025-08-04 11:59:22,021 - ERROR - Failed to load code model.
+2025-08-04 11:59:22,027 - ERROR - CodeGenerator initialization failed:
+2025-08-04 11:59:22,028 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 12:00:13,465 - INFO - Initializing CodeGenerator...
+2025-08-04 12:00:13,465 - INFO - Vertex AI initialized.
+2025-08-04 12:00:13,465 - ERROR - Failed to load code model.
+2025-08-04 12:00:13,465 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:00:13,484 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\language_models\_language_models.py", line 136, in __init__
+    super().__init__(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 261, in __init__
+    self._endpoint = aiplatform.Endpoint._construct_sdk_resource_from_gapic(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\models.py", line 596, in _construct_sdk_resource_from_gapic
+    endpoint = super()._construct_sdk_resource_from_gapic(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 1078, in _construct_sdk_resource_from_gapic
+    sdk_resource = cls._empty_constructor(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 1007, in _empty_constructor
+    VertexAiResourceNoun.__init__(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+2025-08-04 12:00:13,585 - INFO - Initializing CodeGenerator...
+2025-08-04 12:00:13,585 - INFO - Vertex AI initialized.
+2025-08-04 12:00:13,585 - ERROR - Failed to load code model.
+2025-08-04 12:00:13,585 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:00:13,585 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\language_models\_language_models.py", line 136, in __init__
+    super().__init__(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 261, in __init__
+    self._endpoint = aiplatform.Endpoint._construct_sdk_resource_from_gapic(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\models.py", line 596, in _construct_sdk_resource_from_gapic
+    endpoint = super()._construct_sdk_resource_from_gapic(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 1078, in _construct_sdk_resource_from_gapic
+    sdk_resource = cls._empty_constructor(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 1007, in _empty_constructor
+    VertexAiResourceNoun.__init__(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+2025-08-04 12:01:02,803 - INFO - Initializing CodeGenerator...
+2025-08-04 12:01:02,819 - INFO - Vertex AI initialized.
+2025-08-04 12:01:02,819 - ERROR - Failed to load code model.
+2025-08-04 12:01:02,819 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:01:02,819 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 12:01:02,926 - INFO - Initializing CodeGenerator...
+2025-08-04 12:01:02,930 - INFO - Vertex AI initialized.
+2025-08-04 12:01:02,930 - ERROR - Failed to load code model.
+2025-08-04 12:01:02,930 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:01:02,930 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File path/to/your-service-account.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 12:02:34,093 - INFO - Initializing CodeGenerator...
+2025-08-04 12:02:34,093 - INFO - Vertex AI initialized.
+2025-08-04 12:02:34,093 - ERROR - Failed to load code model.
+2025-08-04 12:02:34,093 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:02:34,093 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File true-energy-464318-g4-9c4bd0dafbbf.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 12:02:34,205 - INFO - Initializing CodeGenerator...
+2025-08-04 12:02:34,205 - INFO - Vertex AI initialized.
+2025-08-04 12:02:34,205 - ERROR - Failed to load code model.
+2025-08-04 12:02:34,207 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:02:34,207 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 63, in __init__
+    super().__init__(project=project, location=location, credentials=credentials)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\base.py", line 558, in __init__
+    self.credentials = credentials or initializer.global_config.credentials
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 338, in credentials
+    self._set_project_as_env_var_or_google_auth_default()
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\initializer.py", line 98, in _set_project_as_env_var_or_google_auth_default
+    credentials, _ = google.auth.default()
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 651, in default
+    credentials, project_id = checker()
+                              ^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 644, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 293, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\auth\_default.py", line 125, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File true-energy-464318-g4-9c4bd0dafbbf.json was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 293, in from_pretrained
+    raise auth_exceptions.GoogleAuthError(credential_exception_str) from e
+google.auth.exceptions.GoogleAuthError: 
+Unable to authenticate your request.
+Depending on your runtime environment, you can complete authentication by:
+- if in local JupyterLab instance: `!gcloud auth login` 
+- if in Colab:
+    -`from google.colab import auth`
+    -`auth.authenticate_user()`
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+
+2025-08-04 12:04:19,152 - INFO - Initializing CodeGenerator...
+2025-08-04 12:04:19,152 - INFO - Vertex AI initialized.
+2025-08-04 12:04:21,388 - INFO - Loaded code-bison model.
+2025-08-04 12:04:23,094 - INFO - Loaded embedding model.
+2025-08-04 12:04:24,983 - ERROR - Error loading from GCS.
+2025-08-04 12:04:24,983 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:04:24,983 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4352, in _prep_and_do_download
+    self._do_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1007, in _do_download
+    response = download.consume(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\download.py", line 263, in consume
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\download.py", line 245, in retriable_request
+    self._process_response(result)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\_download.py", line 188, in _process_response
+    _helpers.require_status_code(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\_helpers.py", line 108, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 51, in __init__
+    self.load_from_gcs()
+  File "d:\Projects\Code Generator\app\generator.py", line 67, in load_from_gcs
+    bucket.blob("knowledge_base/faiss_index.index").download_to_filename(index_path)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1302, in download_to_filename
+    self._handle_filename_and_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1178, in _handle_filename_and_download
+    self._prep_and_do_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4365, in _prep_and_do_download
+    _raise_from_invalid_response(exc)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4811, in _raise_from_invalid_response
+    raise exceptions.from_http_status(response.status_code, message, response=response)
+google.api_core.exceptions.Forbidden: 403 GET https://storage.googleapis.com/download/storage/v1/b/your-bucket-name/o/knowledge_base%2Ffaiss_index.index?alt=media: The billing account for the owning project is disabled in state closed: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+
+2025-08-04 12:04:25,154 - INFO - Initializing CodeGenerator...
+2025-08-04 12:04:25,154 - INFO - Vertex AI initialized.
+2025-08-04 12:04:26,795 - INFO - Loaded code-bison model.
+2025-08-04 12:04:28,570 - INFO - Loaded embedding model.
+2025-08-04 12:04:30,612 - ERROR - Error loading from GCS.
+2025-08-04 12:04:30,612 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:04:30,612 - ERROR - Traceback (most recent call last):
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4352, in _prep_and_do_download
+    self._do_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1007, in _do_download
+    response = download.consume(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\download.py", line 263, in consume
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\requests\download.py", line 245, in retriable_request
+    self._process_response(result)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\_download.py", line 188, in _process_response
+    _helpers.require_status_code(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\resumable_media\_helpers.py", line 108, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 51, in __init__
+    self.load_from_gcs()
+  File "d:\Projects\Code Generator\app\generator.py", line 67, in load_from_gcs
+    bucket.blob("knowledge_base/faiss_index.index").download_to_filename(index_path)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1302, in download_to_filename
+    self._handle_filename_and_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 1178, in _handle_filename_and_download
+    self._prep_and_do_download(
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4365, in _prep_and_do_download
+    _raise_from_invalid_response(exc)
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\storage\blob.py", line 4811, in _raise_from_invalid_response
+    raise exceptions.from_http_status(response.status_code, message, response=response)
+google.api_core.exceptions.Forbidden: 403 GET https://storage.googleapis.com/download/storage/v1/b/your-bucket-name/o/knowledge_base%2Ffaiss_index.index?alt=media: The billing account for the owning project is disabled in state closed: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+
+2025-08-04 12:06:13,359 - INFO - Initializing CodeGenerator...
+2025-08-04 12:06:13,359 - INFO - Vertex AI initialized.
+2025-08-04 12:06:15,264 - INFO - Loaded code-bison model.
+2025-08-04 12:06:17,104 - INFO - Loaded embedding model.
+2025-08-04 12:06:20,378 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:06:20,378 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:06:20,518 - INFO - Initializing CodeGenerator...
+2025-08-04 12:06:20,518 - INFO - Vertex AI initialized.
+2025-08-04 12:06:22,431 - INFO - Loaded code-bison model.
+2025-08-04 12:06:24,060 - INFO - Loaded embedding model.
+2025-08-04 12:06:27,353 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:06:27,354 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:08:23,662 - INFO - Initializing CodeGenerator...
+2025-08-04 12:08:23,662 - INFO - Vertex AI initialized.
+2025-08-04 12:08:25,508 - INFO - Loaded code-bison model.
+2025-08-04 12:08:27,555 - INFO - Loaded embedding model.
+2025-08-04 12:08:31,047 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:08:31,047 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:08:31,211 - INFO - Initializing CodeGenerator...
+2025-08-04 12:08:31,211 - INFO - Vertex AI initialized.
+2025-08-04 12:08:32,891 - INFO - Loaded code-bison model.
+2025-08-04 12:08:34,555 - INFO - Loaded embedding model.
+2025-08-04 12:08:37,798 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:08:37,798 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:10:32,994 - INFO - Initializing CodeGenerator...
+2025-08-04 12:10:32,994 - INFO - Vertex AI initialized.
+2025-08-04 12:10:35,041 - INFO - Loaded code-bison model.
+2025-08-04 12:10:36,988 - INFO - Loaded embedding model.
+2025-08-04 12:10:40,468 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:10:40,468 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:10:40,619 - INFO - Initializing CodeGenerator...
+2025-08-04 12:10:40,619 - INFO - Vertex AI initialized.
+2025-08-04 12:10:42,307 - INFO - Loaded code-bison model.
+2025-08-04 12:10:44,159 - INFO - Loaded embedding model.
+2025-08-04 12:10:47,235 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:10:47,235 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:11:01,112 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:11:03,048 - ERROR - Code generation model failed.
+2025-08-04 12:12:10,043 - INFO - Initializing CodeGenerator...
+2025-08-04 12:12:10,043 - INFO - Vertex AI initialized.
+2025-08-04 12:12:11,912 - INFO - Loaded code-bison model.
+2025-08-04 12:12:13,654 - INFO - Loaded embedding model.
+2025-08-04 12:12:16,928 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:12:16,936 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:12:17,028 - INFO - Initializing CodeGenerator...
+2025-08-04 12:12:17,028 - INFO - Vertex AI initialized.
+2025-08-04 12:12:18,984 - INFO - Loaded code-bison model.
+2025-08-04 12:12:20,602 - INFO - Loaded embedding model.
+2025-08-04 12:12:23,885 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:12:23,885 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:12:40,658 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:12:42,569 - ERROR - Code generation model failed.
+2025-08-04 12:13:15,461 - INFO - Initializing CodeGenerator...
+2025-08-04 12:13:15,461 - INFO - Vertex AI initialized.
+2025-08-04 12:13:17,357 - ERROR - Failed to load code model.
+2025-08-04 12:13:17,357 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:13:17,378 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison@latest")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 77, in __init__
+    self._gca_resource = getattr(self.api_client, self._getter_method)(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform_v1\services\model_garden_service\client.py", line 766, in get_publisher_model
+    response = rpc(
+               ^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 Publisher Model `publishers/google/models/code-bison@latest` is not found.
+
+2025-08-04 12:13:17,506 - INFO - Initializing CodeGenerator...
+2025-08-04 12:13:17,506 - INFO - Vertex AI initialized.
+2025-08-04 12:13:19,131 - ERROR - Failed to load code model.
+2025-08-04 12:13:19,131 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:13:19,131 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison@latest")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 77, in __init__
+    self._gca_resource = getattr(self.api_client, self._getter_method)(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform_v1\services\model_garden_service\client.py", line 766, in get_publisher_model
+    response = rpc(
+               ^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 Publisher Model `publishers/google/models/code-bison@latest` is not found.
+
+2025-08-04 12:14:18,829 - INFO - Initializing CodeGenerator...
+2025-08-04 12:14:18,829 - INFO - Vertex AI initialized.
+2025-08-04 12:14:21,036 - INFO - Loaded code-bison model.
+2025-08-04 12:14:22,843 - INFO - Loaded embedding model.
+2025-08-04 12:14:25,745 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:14:25,745 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:14:25,848 - INFO - Initializing CodeGenerator...
+2025-08-04 12:14:25,848 - INFO - Vertex AI initialized.
+2025-08-04 12:14:27,618 - INFO - Loaded code-bison model.
+2025-08-04 12:14:29,340 - INFO - Loaded embedding model.
+2025-08-04 12:14:35,577 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:14:35,577 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:14:49,304 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:14:51,385 - ERROR - Code generation model failed.
+2025-08-04 12:15:53,762 - INFO - Initializing CodeGenerator...
+2025-08-04 12:15:53,762 - INFO - Vertex AI initialized.
+2025-08-04 12:15:55,862 - INFO - Loaded code-bison model.
+2025-08-04 12:15:57,699 - INFO - Loaded embedding model.
+2025-08-04 12:16:01,018 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:16:01,018 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:16:01,151 - INFO - Initializing CodeGenerator...
+2025-08-04 12:16:01,151 - INFO - Vertex AI initialized.
+2025-08-04 12:16:03,031 - INFO - Loaded code-bison model.
+2025-08-04 12:16:05,073 - INFO - Loaded embedding model.
+2025-08-04 12:16:08,758 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:16:08,758 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:16:27,436 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:16:29,380 - ERROR - Code generation model failed.
+2025-08-04 12:17:47,265 - INFO - Initializing CodeGenerator...
+2025-08-04 12:17:47,265 - INFO - Vertex AI initialized.
+2025-08-04 12:17:49,221 - INFO - Loaded code-bison model.
+2025-08-04 12:17:51,142 - INFO - Loaded embedding model.
+2025-08-04 12:17:54,530 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:17:54,530 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:17:54,652 - INFO - Initializing CodeGenerator...
+2025-08-04 12:17:54,652 - INFO - Vertex AI initialized.
+2025-08-04 12:17:56,419 - INFO - Loaded code-bison model.
+2025-08-04 12:17:58,525 - INFO - Loaded embedding model.
+2025-08-04 12:18:02,008 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:18:02,008 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:18:17,990 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:18:19,889 - ERROR - Code generation model failed.
+2025-08-04 12:21:31,313 - INFO - Initializing CodeGenerator...
+2025-08-04 12:21:31,313 - INFO - Vertex AI initialized.
+2025-08-04 12:21:33,102 - ERROR - Failed to load code model.
+2025-08-04 12:21:33,102 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:21:33,102 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison-32@001")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 77, in __init__
+    self._gca_resource = getattr(self.api_client, self._getter_method)(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform_v1\services\model_garden_service\client.py", line 766, in get_publisher_model
+    response = rpc(
+               ^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 Publisher Model `publishers/google/models/code-bison-32@001` is not found.
+
+2025-08-04 12:21:33,273 - INFO - Initializing CodeGenerator...
+2025-08-04 12:21:33,273 - INFO - Vertex AI initialized.
+2025-08-04 12:21:35,200 - ERROR - Failed to load code model.
+2025-08-04 12:21:35,200 - ERROR - CodeGenerator initialization failed:
+2025-08-04 12:21:35,200 - ERROR - Traceback (most recent call last):
+  File "d:\Projects\Code Generator\app\main.py", line 41, in <module>
+    generator = CodeGenerator()
+                ^^^^^^^^^^^^^^^
+  File "d:\Projects\Code Generator\app\generator.py", line 34, in __init__
+    self.code_model = CodeGenerationModel.from_pretrained("code-bison-32@001")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 291, in from_pretrained
+    return _from_pretrained(interface_class=cls, model_name=model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 208, in _from_pretrained
+    model_info = _get_model_info(
+                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\vertexai\_model_garden\_model_garden_models.py", line 124, in _get_model_info
+    _publisher_models._PublisherModel(  # pylint: disable=protected-access
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform\_publisher_models.py", line 77, in __init__
+    self._gca_resource = getattr(self.api_client, self._getter_method)(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\cloud\aiplatform_v1\services\model_garden_service\client.py", line 766, in get_publisher_model
+    response = rpc(
+               ^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Sanjit Kamath\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 Publisher Model `publishers/google/models/code-bison-32@001` is not found.
+
+2025-08-04 12:22:34,667 - INFO - Initializing CodeGenerator...
+2025-08-04 12:22:34,667 - INFO - Vertex AI initialized.
+2025-08-04 12:22:36,547 - INFO - Loaded code-bison model.
+2025-08-04 12:22:38,270 - INFO - Loaded embedding model.
+2025-08-04 12:22:41,757 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:22:41,757 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:22:41,900 - INFO - Initializing CodeGenerator...
+2025-08-04 12:22:41,900 - INFO - Vertex AI initialized.
+2025-08-04 12:22:43,795 - INFO - Loaded code-bison model.
+2025-08-04 12:22:45,640 - INFO - Loaded embedding model.
+2025-08-04 12:22:49,302 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 12:22:49,302 - INFO - CodeGenerator initialized successfully.
+2025-08-04 12:23:12,166 - INFO - Query embedding shape: (1, 768), index dim: 768
+2025-08-04 12:23:14,081 - ERROR - Code generation model failed.
+2025-08-04 18:51:39,309 - INFO - Initializing CodeGenerator...
+2025-08-04 18:51:39,309 - INFO - Vertex AI initialized.
+2025-08-04 18:51:39,309 - INFO - Loaded Gemini 2.0 Flash Lite model.
+2025-08-04 18:51:40,727 - INFO - Loaded embedding model.
+2025-08-04 18:51:43,381 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 18:51:43,381 - INFO - CodeGenerator initialized successfully.
+2025-08-04 18:51:43,550 - INFO - Initializing CodeGenerator...
+2025-08-04 18:51:43,550 - INFO - Vertex AI initialized.
+2025-08-04 18:51:43,550 - INFO - Loaded Gemini 2.0 Flash Lite model.
+2025-08-04 18:51:44,888 - INFO - Loaded embedding model.
+2025-08-04 18:51:47,703 - INFO - FAISS index and texts loaded from GCS.
+2025-08-04 18:51:47,703 - INFO - CodeGenerator initialized successfully.
+2025-08-04 18:52:03,256 - INFO - Query embedding shape: (1, 768), index dim: 768

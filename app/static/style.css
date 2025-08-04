@@ -1,0 +1,99 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ccf9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+}
+
+#output {
+  width: 70%;
+  max-width: 800px;
+  min-height: 200px;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  color: #333;
+  text-align: left;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+#output pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Input area */
+#input-container {
+  width: 70%;
+  max-width: 800px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 50px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: monospace;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+/* Button */
+button {
+  float: right;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #e0f7fa;
+}
+
+button::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'%3E%3Cpath d='M2.01 21L23 12 2.01 3 2 10l15 2-15 2z'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+}

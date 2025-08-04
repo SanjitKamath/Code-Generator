@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Generator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Code Generator</h1>
+    <h2>Your AI Coding Assistant</h2>
+  </header>
+
+  <div id="output" class="{{ 'hidden' if not (generated_code or error) else '' }}">
+    {% if generated_code %}
+      <pre>{{ generated_code }}</pre>
+    {% elif error %}
+      <p style="color: red;"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+  </div>
+
+  <div id="input-container">
+    <form method="POST" action="/generate">
+      <textarea name="prompt" placeholder="Describe what you want to build..." required>{{ prompt if prompt else '' }}</textarea>
+      <button type="submit">Generate</button>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
