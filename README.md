@@ -71,6 +71,108 @@ The system is composed of the following key components:
 - Configurable via environment variables  
 
 ---
+# Setting Up Google Cloud Console for Your RAG-Based Code Generator
+
+This guide walks you through the step-by-step process to configure your Google Cloud Platform (GCP) environment for deploying and running a Retrieval-Augmented Generation (RAG) based code generator.
+
+---
+
+## 1. **Create a GCP Project**
+- Go to the [Google Cloud Console](https://console.cloud.google.com/).
+- Click on the project dropdown (top left) and select **"NEW PROJECT."**
+- Give it a unique name and remember the **Project ID** (you’ll use this in your `.env` file and code).
+
+---
+
+## 2. **Enable Required APIs**
+- Navigate to **APIs & Services > Library** within your project.
+- Enable the following APIs:
+  - **Vertex AI API**
+  - **Cloud Storage API**
+  - **IAM Service Account Credentials API**
+
+---
+
+## 3. **Set Up Vertex AI**
+- Go to **Vertex AI > Overview** in the sidebar.
+- Click **Enable Vertex AI API** if prompted.
+- In **Model Garden**, make sure required models are accessible in your region (e.g., `us-central1`):
+  - "Gemini 2.0 Flash"
+  - "text-embedding-005"
+
+---
+
+## 4. **Create and Configure a Cloud Storage Bucket**
+- Go to **Cloud Storage > Buckets**.
+- Click **CREATE**.
+- Provide a globally unique bucket name, like: `your-project-rag-bucket`.
+- Set the region to match your Vertex AI region (e.g., `us-central1`).
+- This bucket will be used to store the FAISS index and ingested text documents.
+
+---
+
+## 5. **Create a Service Account and Grant Permissions**
+- Navigate to **IAM & Admin > Service Accounts**.
+- Click **CREATE SERVICE ACCOUNT**.
+- Give it a name like `vertex-ai-rag-service`.
+- Assign the following roles:
+  - **Vertex AI User**
+  - **Storage Object Admin**
+- After creation, go to the "KEYS" tab:
+  - Click **ADD KEY > Create new key > JSON**
+  - Download and securely store the JSON key file (needed for local development).
+
+---
+
+## 6. **Set Environment Variables (.env)**
+
+Create a `.env` file in your project root with the following:
+
+```env
+VERTEX_PROJECT_ID=your-gcp-project-id
+VERTEX_LOCATION=us-central1
+GCS_BUCKET_NAME=your-bucket-name
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service-account-key.json
+```
+
+Ensure `/path/to/your/service-account-key.json` is the absolute path to your downloaded key.
+
+> ✅ For cloud deployment: Use Secret Manager instead of environment variables, and never hardcode credentials.
+
+---
+
+## 7. **(Optional) Check Vertex AI Quotas & Region Alignment**
+- Go to **Vertex AI > Quotas** to verify available limits.
+- Confirm all resources (models, bucket, etc.) reside in the same region for optimal performance.
+
+---
+
+## 8. **Enable Billing**
+- Make sure billing is enabled on your GCP project.
+- Note: Vertex AI and Cloud Storage **are not free**. Charges depend on usage.
+
+---
+
+## ✅ After Completing These Steps
+You are ready to:
+- Run your code generator locally using authenticated API calls.
+- Build the FAISS knowledge base.
+- Deploy to a cloud service if desired.
+
+---
+
+## 🔁 Summary of Steps
+
+1. ✅ Create GCP Project  
+2. ✅ Enable Vertex AI & Storage APIs  
+3. ✅ Set Up Vertex AI  
+4. ✅ Create Cloud Storage Bucket  
+5. ✅ Create Service Account with permissions  
+6. ✅ Set Environment Variables  
+7. ✅ Ensure same region setup  
+8. ✅ Enable Billing  
+
+---
 
 ## ⚡ **Quick Start**
 
